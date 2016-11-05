@@ -1,9 +1,6 @@
-# 2016 G0V @ NYC Hackathon Landing Page
+# 2016 G0V @ NYC Hackathon Kiminonawa Landing Page
 
-Click [here](https://www.dropbox.com/sh/g100rqg9bu9xpm8/AACjCA01Ywf9pDVQnHjlS9TRa?dl=0) to find the design assets for this page
-
-Static image
-![alt text](g0v_home.jpg "Landing Page static")
+Click [here](https://www.dropbox.com/sh/ajahog74i6iyfye/AABMjWupsaWifbHgpkmIvDXRa?dl=0&preview=g0v_nameistw_1_01.jpg) to find the design assets for this page
 
 ## To set up and contribute
 - `git clone` this repo

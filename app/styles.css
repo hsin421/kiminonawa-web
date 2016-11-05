@@ -17,7 +17,7 @@ body {
 }
 
 a {
-  color: #009c00;
+  color: #d11212;
 }
 
 a:hover {
@@ -53,16 +53,16 @@ a:hover {
 }
 
 .navLinkSelected {
-  color: #009c00;
-  border-bottom: 5px solid #009c00;
+  color: #d11212;
+  border-bottom: 5px solid #d11212;
 }
 
 .navLink:hover, .navLink:focus {
-  color: #009c00;
+  color: #d11212;
 }
 
 .navButton {
-  background-color: #009c00;
+  background-color: #d11212;
   color: #fff;
   height: 35px;
   line-height: 0;
@@ -73,7 +73,7 @@ a:hover {
 
 .navButton:hover, .navButton:active, .navButton:focus {
   background-color: #fff;
-  color: #009c00;
+  color: #d11212;
 }
 
 .langLink {
@@ -84,7 +84,7 @@ a:hover {
 
 .langLink:hover {
   text-decoration: underline;
-  color: #009c00;
+  color: #d11212;
 }
 
 .socialIcon {
@@ -166,7 +166,7 @@ a:hover {
 }
 
 .heading {
-  color: #009c00;
+  color: #d11212;
   font-size: 32px;
   font-weight: 900;
   margin: 30px;
@@ -203,7 +203,7 @@ a:hover {
 }
 
 .infoLabel {
-  color: #009c00;
+  color: #d11212;
   font-weight: 600;
   margin: 10px 0 5px;
 }
@@ -293,7 +293,7 @@ a:hover {
 }
 
 .greenDivider {
-  border-bottom: 5px solid #009c00;
+  border-bottom: 5px solid #d11212;
   height: 10px;
   width: 100%;
 }
@@ -352,13 +352,13 @@ a:hover {
 }
 
 .headerItemResponsive a:hover {
-  color: #009c00;
+  color: #d11212;
 }
 
 /* Schedule Page */
 
 .scheduleControl {
-  border-bottom: 3px solid #009c00;
+  border-bottom: 3px solid #d11212;
   background-color: rgba(0,0,0,.12);
   display: flex;
 }
@@ -375,11 +375,11 @@ a:hover {
 .scheduleDateSelected {
   composes: scheduleDate;
   color: #fff;
-  background-color: #009c00;
+  background-color: #d11212;
 }
 
 .scheduleDate:hover{
-  color: #009c00;
+  color: #d11212;
 }
 
 .scheduleDateSelected:hover{

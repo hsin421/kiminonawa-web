@@ -18,6 +18,8 @@ body {
   color: rgba(70, 71, 72, 1);
 }
 
+
+
 .linkDecorated {
   text-decoration: underline;
   color: #333;
@@ -39,7 +41,7 @@ a:hover {
 
 .appBarLogo {
   display: inline-block;
-  width: 165px;
+  width: 135px;
 }
 
 .appBarNav {
@@ -274,6 +276,7 @@ a:hover {
 
 .eventInfo {
   text-align: left;
+  padding-bottom: 5%;
 }
 
 .eventInfo p {
@@ -371,6 +374,7 @@ a:hover {
 
 .footer {
   background-color: #333;
+  padding-top: 1%;
 }
 
 .footerLogo {

@@ -89,44 +89,43 @@ export default class LandingCH extends React.Component {
               </div>
               <h1 className={styles.docIconText}>網頁回報案件</h1>
               <Form>
-                <Col md="5" md-offset="1">
-                  <legend><h6 className={styles.formtext}>網站所有者</h6></legend>
-                  <Input hint="機構網站名稱, 如Costco" />
-                </Col>
-                <Col md="5" md-offset="1">
-                  <legend><h6 className={styles.formtext}>問題網址</h6></legend>
-                  <Input hint="王小明" />
-                </Col>
+                  <Col md="5" md-offset="1">
+                    <legend><h6 className={styles.formtext}>網站所有者</h6></legend>
+                    <Input hint="機構網站名稱, 如Costco" />
+                  </Col>
+                  <Col md="5" md-offset="1">
+                    <legend><h6 className={styles.formtext}>問題網址</h6></legend>
+                    <Input hint="王小明" />
+                  </Col>
 
-                <Col md="5" md-offset="1">
-                  <legend><h6 className={styles.formtext}>您的姓名</h6></legend>
-                  <Input hint="user@email.com" />
-                </Col>
-                <Col md="5" md-offset="1">
-                  <legend><h6 className={styles.formtext}>您的信箱</h6></legend>
-                  <Input hint="http://www.url.com/page" />
-                </Col>
+                  <Col md="5" md-offset="1">
+                    <legend><h6 className={styles.formtext}>您的姓名</h6></legend>
+                    <Input hint="user@email.com" />
+                  </Col>
+                  <Col md="5" md-offset="1">
+                    <legend><h6 className={styles.formtext}>您的信箱</h6></legend>
+                    <Input hint="http://www.url.com/page" />
+                  </Col>
 
-                <Col md="5" md-offset="1">
-                  <legend><h6 className={styles.formtext}>公司負責人信箱 (Optional)</h6></legend>
-                  <Input hint="company@email.com" />
-                </Col>
-                <Col md="5" md-offset="1">
-                  <legend><h6 className={styles.formtext}>上傳螢幕截圖 (Optional)</h6></legend>
-                  <Input hint="選擇上傳圖片" />
-                </Col>
-                <Col md="10" md-offset="1">
-                  <legend><h6 className={styles.formtext}>詳細敘述 (Optional)</h6></legend>
-                  <Textarea hint="請詳細指出名稱誤植處" />
-                </Col>
-                <Col md="5" md-offset="5">
-                  <Button className={styles.heroBtn} variant="raised">回覆</Button>
-                </Col>
+                  <Col md="5" md-offset="1">
+                    <legend><h6 className={styles.formtext}>公司負責人信箱 (Optional)</h6></legend>
+                    <Input hint="company@email.com" />
+                  </Col>
+                  <Col md="5" md-offset="1">
+                    <legend><h6 className={styles.formtext}>上傳螢幕截圖 (Optional)</h6></legend>
+                    <Input hint="選擇上傳圖片" />
+                  </Col>
+                  <Col md="10" md-offset="1">
+                    <legend><h6 className={styles.formtext}>詳細敘述 (Optional)</h6></legend>
+                    <Textarea hint="請詳細指出名稱誤植處" />
+                  </Col>
+                  <Col md="5" md-offset="5">
+                    <Button className={styles.heroBtn} variant="raised">回覆</Button>
+                  </Col>
               </Form>
             </Col>
           </Row>
         </Container>
-
 			</div>
 		);
 	}

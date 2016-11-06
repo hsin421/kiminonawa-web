@@ -56,10 +56,10 @@ export default class ChPages extends React.Component {
                    <tbody>
                      <tr style={s1}>
                         <td className="mui--appbar-height">
-                          <Link to="/schedule" className={styles.navLink} activeClassName={styles.navLinkSelected}>已知回報</Link>
+                          <Link to="/known" className={styles.navLink} activeClassName={styles.navLinkSelected}>已知回報</Link>
                         </td>
                         <td className="mui--appbar-height">
-                          <Link to="/speakers" className={styles.navLink} activeClassName={styles.navLinkSelected}>成功案例</Link>
+                          <Link to="/success" className={styles.navLink} activeClassName={styles.navLinkSelected}>成功案例</Link>
                         </td>
                         <td>
                           <Link to="/staff" className={styles.navLink} activeClassName={styles.navLinkSelected}>工作人員</Link>

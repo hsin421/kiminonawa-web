@@ -13,9 +13,8 @@ class App extends React.Component {
       <Router history={hashHistory} >
         <Route path="/" component={Pages}>
           <IndexRoute component={LandingCH} />
-          <Route path="/staff" component={Staff} />
-          <Route path="/schedule" component={ScheduleCH} />
-          <Route path="/speakers" component={SpeakersCH} />
+          <Route path="/known" component={Staff} />
+          <Route path="/success" component={ScheduleCH} />
         </Route>
       </Router>
     );

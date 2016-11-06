@@ -40,9 +40,9 @@ export default class LandingCH extends React.Component {
 
 	          <Col md="12" md-offset="0" style={fluidCol}>
               <div className={styles.hero}>
-    	          <h3 className={styles.heading}>你也曾遇過一下國籍被誤認的困擾嗎？</h3>
+    	          <h3 className={styles.headingWhiteText}>你也曾遇過一下國籍被誤認的困擾嗎？</h3>
                 <div className={styles.heroTextWrap}>
-      	          <p className={styles.bodyText}>留學生申請簽證或學校，海外開戶，申請工作，填寫申請各式文件時，國籍找不到台灣(Taiwan/ROC) 而被迫選擇 PRC or Taiwan, Province of China?
+      	          <p className={styles.bodyWhiteText}>留學生申請簽證或學校，海外開戶，申請工作，填寫申請各式文件時，國籍找不到台灣(Taiwan/ROC) 而被迫選擇 PRC or Taiwan, Province of China?
 海外的大秘寶需要熱血如你 一身絕技如你來參與 </p>
                 </div>
                 <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746"

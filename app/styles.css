@@ -218,6 +218,13 @@ a:hover {
 }
 
 .heading {
+  font-size: 32px;
+  font-weight: 900;
+  margin: 30px;
+  line-height: 36px;
+}
+
+.headingWhiteText {
   color: #fff;
   font-size: 32px;
   font-weight: 900;
@@ -226,6 +233,11 @@ a:hover {
 }
 
 .bodyText {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.bodyWhiteText {
   color: #fff;
   font-size: 16px;
   font-weight: 300;

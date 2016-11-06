@@ -53,6 +53,7 @@ export default class ChPages extends React.Component {
               <Col md="5" className={styles.appBarNav}>
                 <Link to="/known" className={styles.navLink} activeClassName={styles.navLinkSelected}>已知回報</Link>
                 <Link to="/success" className={styles.navLink} activeClassName={styles.navLinkSelected}>成功案例</Link>
+                <Link to="/about" className={styles.navLink} activeClassName={styles.navLinkSelected}>關於正名</Link>
               </Col>
               <Col md="5" className={styles.appBarExtra}>
                 <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746"
@@ -73,6 +74,7 @@ export default class ChPages extends React.Component {
             <li className={styles.headerItemResponsive}><Link to="/" onClick={this.handleHamburgerClick}>首頁</Link> </li>
             <li className={styles.headerItemResponsive}><Link to="/known" onClick={this.handleHamburgerClick}>已知回報</Link> </li>
             <li className={styles.headerItemResponsive}><Link to="/success" onClick={this.handleHamburgerClick}>成功案例</Link> </li>
+            <li className={styles.headerItemResponsive}><Link to="/about" onClick={this.handleHamburgerClick}>關於正名</Link> </li>
             <li className={styles.headerItemResponsive}>
               <a className={styles.socialIcon} href="https://www.facebook.com/g0vus/" target="_blank"><img src={socialFacebook} /></a>
               <a className={styles.socialIcon} href="https://github.com/hsin421/g0vnyc-landing" target="_blank"><img src={socialGithub} /></a>

@@ -126,26 +126,7 @@ export default class LandingCH extends React.Component {
             </Col>
           </Row>
         </Container>
-        <Container className={styles.landingBody}>
-      		<Row>
-      			<Col md="4" md-offset="4">
-      				<h3 className={styles.heading}> 主辦單位 </h3>
-      			</Col>
 
-
-      		</Row>
-          <Divider />
-      		<Row>
-      			<Col md="4" md-offset="4">
-      				<h3 className={styles.heading}> 贊助單位 </h3>
-      			</Col>
-      			<Col md="8" md-offset="2">
-              <div className={styles.bodyTextBottom}>
-      				  海台青 | 美東G0V | 達里律師事務所 | C Bao 餐館 | Taiwan Bear House
-              </div>
-      			</Col>
-      		</Row>
-        </Container>
 			</div>
 		);
 	}

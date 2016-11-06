@@ -2,6 +2,9 @@ import React from 'react';
 
 import Appbar from 'muicss/lib/react/appbar';
 import Button from 'muicss/lib/react/button';
+import Form from 'muicss/lib/react/form';
+import Input from 'muicss/lib/react/input';
+import Textarea from 'muicss/lib/react/textarea';
 import Container from 'muicss/lib/react/container';
 import Divider from 'muicss/lib/react/divider';
 import Row from 'muicss/lib/react/row';
@@ -55,7 +58,7 @@ export default class LandingCH extends React.Component {
 
 
           </Row>
-          
+
           <Row>
             <Col style={fluidCol}>
               <div className={styles.redDivider}></div>
@@ -73,9 +76,9 @@ export default class LandingCH extends React.Component {
                 <p>本網站設置的目的，是提供海外台人一個通報的平台，來改善這個狀況，集結群眾的力量為台灣正名。我們收到通報之後，經過查證屬實，將以北美FAPA(Formosan Association for Public Affairs)名義向該機關提出正名要求，並追蹤ヱ機構是否回應訴求．這些年北美FAPA致力於正名活動，已向許多官方及民間機構提出訴求並成功正名，其中包含：移民署，FDA，Apple...等等．</p>
                 <div style={pMargin}></div>
                 <p>不要再讓台灣人在海外被吃豆腐了，一起動起來為台灣正名！</p>
-              </div>      		
+              </div>
           	</Col>
-            
+
             <Col md="12" style={fluidCol}>
               <Divider></Divider>
             </Col>

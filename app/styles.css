@@ -64,9 +64,9 @@ a:hover {
 .navButton {
   background-color: #d11212;
   color: #fff;
-  height: 35px;
+  height: 36px;
   line-height: 0;
-  padding: 10px;
+  padding: 10px 20px;
   margin: 0 8px;
   vertical-align: inherit;
 
@@ -156,6 +156,11 @@ a:hover {
   color: #fff;
 
   border-radius: 18px;
+}
+
+.heroBtn:hover {
+  background-color: #FFF;
+  color: #d11212;
 }
 
 .heroImg {

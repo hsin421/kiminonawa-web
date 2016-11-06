@@ -47,14 +47,16 @@ a:hover {
 }
 
 .navLink {
+  display: inline-block;
+  line-height: 1em;
   margin: 0 8px;
   color: #444;
-  /*padding-bottom: 18px;*/
+  padding: 23px 0;
 }
 
 .navLinkSelected {
   color: #d11212;
-  border-bottom: 5px solid #d11212;
+  border-bottom: 3px solid #d11212;
 }
 
 .navLink:hover, .navLink:focus {

@@ -51,25 +51,8 @@ export default class ChPages extends React.Component {
                 </span>
               </Col>
               <Col md="5" className={styles.appBarNav}>
-                <div>
-                  <table width="59%">
-                   <tbody>
-                     <tr style={s1}>
-                        <td className="mui--appbar-height">
-                          <Link to="/known" className={styles.navLink} activeClassName={styles.navLinkSelected}>已知回報</Link>
-                        </td>
-                        <td className="mui--appbar-height">
-                          <Link to="/success" className={styles.navLink} activeClassName={styles.navLinkSelected}>成功案例</Link>
-                        </td>
-                        <td>
-                          <Link to="/staff" className={styles.navLink} activeClassName={styles.navLinkSelected}>工作人員</Link>
-                        </td>
-                     </tr>
-                   </tbody>
-                 </table>
-                  
-                </div>
-
+                <Link to="/known" className={styles.navLink} activeClassName={styles.navLinkSelected}>已知回報</Link>
+                <Link to="/success" className={styles.navLink} activeClassName={styles.navLinkSelected}>成功案例</Link>
               </Col>
               <Col md="5" className={styles.appBarExtra}>
                 <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746"

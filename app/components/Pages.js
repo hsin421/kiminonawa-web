@@ -32,6 +32,8 @@ export default class ChPages extends React.Component {
 
   render() {
   	const { children } = this.props;
+
+    let s1 = {verticalAlign: 'middle'};
     return (
       <div>
         <Appbar className={styles.bar}>
@@ -49,10 +51,24 @@ export default class ChPages extends React.Component {
                 </span>
               </Col>
               <Col md="5" className={styles.appBarNav}>
-                <Link to="/schedule" className={styles.navLink} activeClassName={styles.navLinkSelected}>已知回報</Link>
-                <Link to="/speakers" className={styles.navLink} activeClassName={styles.navLinkSelected}>成功案例</Link>
-                <Link to="/staff" className={styles.navLink} activeClassName={styles.navLinkSelected}>工作人員</Link>
-
+                <div>
+                  <table width="59%">
+                   <tbody>
+                     <tr style={s1}>
+                        <td className="mui--appbar-height">
+                          <Link to="/schedule" className={styles.navLink} activeClassName={styles.navLinkSelected}>已知回報</Link>
+                        </td>
+                        <td className="mui--appbar-height">
+                          <Link to="/speakers" className={styles.navLink} activeClassName={styles.navLinkSelected}>成功案例</Link>
+                        </td>
+                        <td>
+                          <Link to="/staff" className={styles.navLink} activeClassName={styles.navLinkSelected}>工作人員</Link>
+                        </td>
+                     </tr>
+                   </tbody>
+                 </table>
+                  
+                </div>
 
               </Col>
               <Col md="5" className={styles.appBarExtra}>

@@ -36,7 +36,7 @@ a:hover {
 }
 
 .appBarNav {
-  padding-top: 15px;
+  /*padding-top: 15px;*/
   font-size: 15px;
 }
 
@@ -49,7 +49,7 @@ a:hover {
 .navLink {
   margin: 0 8px;
   color: #444;
-  padding-bottom: 18px;
+  /*padding-bottom: 18px;*/
 }
 
 .navLinkSelected {
@@ -69,6 +69,10 @@ a:hover {
   padding: 10px;
   margin: 0 8px;
   vertical-align: inherit;
+
+  border-radius: 18px;
+  border-width: 0;
+  font-size: 12px; 
 }
 
 .navButton:hover, .navButton:active, .navButton:focus {
@@ -127,14 +131,31 @@ a:hover {
   background-size: cover;
   padding-top: 10%;
   padding-bottom: 10%;
-  padding-left: 2%;
-  padding-right: 2%;
+
+  padding-right: 0;
+  padding-left: 0;
+/*  padding-left: 2%;
+  padding-right: 2%;*/
+}
+
+@media (min-width: 1024px){
+
+  .heroTextWrap{
+    width: 50%;
+  }
+
+}
+
+.heroTextWrap{
+  margin: auto;
 }
 
 .heroBtn {
   background-color: #d11212;
   border: none;
   color: #fff;
+
+  border-radius: 18px;
 }
 
 .heroImg {
@@ -146,6 +167,13 @@ a:hover {
 .docIconText {
   font-weight: bold;
   color: #d11212;
+  text-align: center;
+}
+
+.redDivider{
+  height: 5px;
+  width: 100%;
+  background-color: #d11212;
 }
 
 @media (max-width: 768px) {
@@ -196,6 +224,13 @@ a:hover {
   font-weight: 300;
 }
 
+@media (min-width: 1024px){
+
+  .bodyTextWrap{
+    /*width: 60%; */
+  }
+}
+
 .bodyTextBold {
   composes: bodyText;
   font-weight: 700;
@@ -232,6 +267,13 @@ a:hover {
 .speakerButton {
   background-color: #efedee;
   margin-bottom: 40px;
+}
+
+.iconWrap{
+  display: table;
+  margin: auto;
+  margin-top: 45px;
+  margin-bottom: 22px;
 }
 
 .icon {

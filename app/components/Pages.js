@@ -48,7 +48,7 @@ export default class ChPages extends React.Component {
                   ☰
                 </span>
               </Col>
-              <Col md="6" className={styles.appBarNav}>
+              <Col md="5" className={styles.appBarNav}>
                 <Link to="/schedule" className={styles.navLink} activeClassName={styles.navLinkSelected}>已知回報</Link>
                 <Link to="/speakers" className={styles.navLink} activeClassName={styles.navLinkSelected}>成功案例</Link>
                 <Link to="/staff" className={styles.navLink} activeClassName={styles.navLinkSelected}>工作人員</Link>

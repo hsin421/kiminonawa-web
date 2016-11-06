@@ -131,10 +131,21 @@ a:hover {
   padding-right: 2%;
 }
 
+.heroBtn {
+  background-color: #d11212;
+  border: none;
+  color: #fff;
+}
+
 .heroImg {
   display: block;
   margin: 0;
   width: 100%;
+}
+
+.docIconText {
+  font-weight: bold;
+  color: #d11212;
 }
 
 @media (max-width: 768px) {
@@ -172,7 +183,7 @@ a:hover {
 }
 
 .heading {
-  color: #d11212;
+  color: #fff;
   font-size: 32px;
   font-weight: 900;
   margin: 30px;

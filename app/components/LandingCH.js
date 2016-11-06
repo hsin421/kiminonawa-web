@@ -10,6 +10,7 @@ import { Link } from 'react-router';
 
 import styles from '../styles.css';
 import websiteIcon from '../images/g0v_NameIsTaiwan_website_icon.png';
+import docIcon from '../images/g0v_NameIsTaiwan_doc_icon.png';
 import sponsorIcon from '../images/icon_sponsors.png';
 import speakersIcon from '../images/icon_speakers.png';
 import mapImg from '../images/map.jpg';
@@ -29,15 +30,15 @@ export default class LandingCH extends React.Component {
 	          <Col md="12" md-offset="0">
               <div className={styles.hero}>
     	          <h3 className={styles.heading}>你也曾遇過一下國籍被誤認的困擾嗎？</h3>
-    	          <p className={styles.bodyText}>留學生申請簽證或學校，海外開戶，申請工作，填寫申請ྛ式文件時，國籍找不到台灣(Taiwan/ROC) 而被迫選擇 PRC or Taiwan, Province of China?</p>
+    	          <p className={styles.bodyText}>留學生申請簽證或學校，海外開戶，申請工作，填寫申請各式文件時，國籍找不到台灣(Taiwan/ROC) 而被迫選擇 PRC or Taiwan, Province of China?</p>
     	          <p className={styles.bodyText}></p>
                 <p className={styles.bodyText}></p>
                 <p className={styles.bodyText}></p>
                 <p className={styles.bodyText}> 海外的大秘寶需要熱血如你 一身絕技如你來參與 </p>
                 <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746"
                 		target="_blank">
-              		<Button color="primary">網頁回報</Button>
-                  <Button color="primary">下載Extensions</Button>
+              		<Button className={styles.heroBtn} color="primary">網頁回報</Button>
+                  <Button className={styles.heroBtn} color="primary">下載 Chrome Extensions</Button>
               	</a>
               </div>
 	          </Col>
@@ -53,11 +54,11 @@ export default class LandingCH extends React.Component {
           		<h3 className={styles.heading}>網頁回報案件</h3>
           	</Col>
             <Col md="6">
-            	<a href="https://www.google.com/maps/place/1460+Broadway,+New+York,+NY+10036/@40.7551113,-73.9884183,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259ab29218823:0x9ed7f9958f0596ca!8m2!3d40.7551073!4d-73.9862243" target="_blank">
-            		<img src={mapImg} width="100%" />
-            	</a>
             </Col>
-            <Col md="6" className={styles.eventInfo}>
+
+            <Col md="8" md-offset="2" className={styles.eventInfo}>
+              <img src={docIcon} className={styles.icon} />\
+              <h1 className={styles.docIconText}>網頁回報案件</h1>
             	<h4 className={styles.infoLabel}>資訊</h4>
             	<p className={styles.bodyTextBold}> 11/5 (Sat) - 11/6 (Sun) </p>
             	<p className={styles.bodyText}>

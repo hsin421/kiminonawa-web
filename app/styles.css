@@ -10,6 +10,16 @@ body {
   line-height: 1.5;
 }
 
+.copyrightText {
+  color: rgba(209, 210, 211, 1);
+  font: 6px;
+}
+
+.formText {
+  color: rgba(70, 71, 72, 1);
+}
+
+
 
 .linkDecorated {
   text-decoration: underline;
@@ -32,7 +42,7 @@ a:hover {
 
 .appBarLogo {
   display: inline-block;
-  width: 165px;
+  width: 135px;
 }
 
 .appBarNav {
@@ -74,7 +84,7 @@ a:hover {
 
   border-radius: 18px;
   border-width: 0;
-  font-size: 12px; 
+  font-size: 12px;
 }
 
 .navButton:hover, .navButton:active, .navButton:focus {
@@ -273,6 +283,7 @@ a:hover {
 
 .eventInfo {
   text-align: left;
+  padding-bottom: 5%;
 }
 
 .eventInfo p {
@@ -370,6 +381,7 @@ a:hover {
 
 .footer {
   background-color: #333;
+  padding-top: 1%;
 }
 
 .footerLogo {

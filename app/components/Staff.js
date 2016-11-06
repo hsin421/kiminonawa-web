@@ -27,9 +27,9 @@ export default class Staff extends React.Component {
 
   componentDidMount() {
     console.log('mount');
-    axios.get('http://nameistw.herokuapp.com/topic/')
+    axios.get('http://localhost:3000/todos')
       .then(response => {
-        conssole.log(response.data);
+        console.log(response.data);
         // this.setState({});
     });
   }

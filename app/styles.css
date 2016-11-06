@@ -542,3 +542,8 @@ a:hover {
     margin-right: 10px;
   }
 }
+
+.fullWidthImage {
+  display: block;
+  width: 100%;
+}

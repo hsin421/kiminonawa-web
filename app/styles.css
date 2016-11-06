@@ -121,14 +121,31 @@ a:hover {
 }
 
 .hero {
+  background-image: url('./images/feature-image.jpg');
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.heroBtn {
+  background-color: #d11212;
+  border: none;
+  color: #fff;
 }
 
 .heroImg {
   display: block;
   margin: 0;
   width: 100%;
+}
+
+.docIconText {
+  font-weight: bold;
+  color: #d11212;
 }
 
 @media (max-width: 768px) {
@@ -166,7 +183,7 @@ a:hover {
 }
 
 .heading {
-  color: #d11212;
+  color: #fff;
   font-size: 32px;
   font-weight: 900;
   margin: 30px;
@@ -174,7 +191,7 @@ a:hover {
 }
 
 .bodyText {
-  color: #444;
+  color: #fff;
   font-size: 16px;
   font-weight: 300;
 }
@@ -189,7 +206,7 @@ a:hover {
   margin-bottom: 60px;
 }
 
-.bodyTextWhite { 
+.bodyTextWhite {
   composes: bodyText;
   color: white;
 }

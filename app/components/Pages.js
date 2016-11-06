@@ -6,7 +6,7 @@ import Col from 'muicss/lib/react/col';
 import { Link } from 'react-router';
 import Button from 'muicss/lib/react/button';
 import styles from '../styles.css';
-import logo from '../images/organized_g0v.png';
+import logo from '../images/NameIsTaiwan_logo.png';
 import logoDark from '../images/g0v_logo_dark.png';
 import socialFacebook from '../images/icon_facebook_green.png';
 import socialEmail from '../images/icon_email_green.png';
@@ -41,28 +41,29 @@ export default class ChPages extends React.Component {
                 <Link to="/">
                   <img src={logo} className={styles.appBarLogo}/>
                 </Link>
-                <span 
+                <span
                   className={styles.hamburger}
                   onClick={this.handleHamburgerClick}
                 >
                   ☰
                 </span>
               </Col>
-              <Col md="7" className={styles.appBarNav}>
-                <Link to="/known" className={styles.navLink} activeClassName={styles.navLinkSelected}>已知回報</Link>
-                <Link to="/success" className={styles.navLink} activeClassName={styles.navLinkSelected}>成功案例</Link>
-                <a href="https://www.generosity.com/volunteer-fundraising/g0v-at-nyc-first-ever-hackathon" 
-                  target="_blank">
-                  <Button color="accent" className={styles.navButton}>捐款</Button>
-                </a> 
-                <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746" 
-                  target="_blank">
-                  <Button color="primary" className={styles.navButton}>報名</Button>
-                </a>
+              <Col md="5" className={styles.appBarNav}>
+                <Link to="/schedule" className={styles.navLink} activeClassName={styles.navLinkSelected}>已知回報</Link>
+                <Link to="/speakers" className={styles.navLink} activeClassName={styles.navLinkSelected}>成功案例</Link>
+                <Link to="/staff" className={styles.navLink} activeClassName={styles.navLinkSelected}>工作人員</Link>
+
+
               </Col>
-              <Col md="3" className={styles.appBarExtra}>
-                <a className={styles.socialIcon} href="https://www.facebook.com/g0vus/" target="_blank"><img src={socialFacebook} /></a>
-                <a className={styles.socialIcon} href="https://github.com/hsin421/g0vnyc-landing" target="_blank"><img src={socialGithub} /></a>
+              <Col md="5" className={styles.appBarExtra}>
+                <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746"
+                    target="_blank">
+                  <Button color="primary" className={styles.navButton}>網頁回報</Button>
+                </a>
+                <a href="https://www.generosity.com/volunteer-fundraising/g0v-at-nyc-first-ever-hackathon"
+                  target="_blank">
+                  <Button color="accent" className={styles.navButton}>下載Chrome Extension</Button>
+                </a>
               </Col>
             </Row>
           </div>

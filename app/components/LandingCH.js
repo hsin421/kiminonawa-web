@@ -10,7 +10,7 @@ import { Link } from 'react-router';
 
 import styles from '../styles.css';
 import websiteIcon from '../images/g0v_NameIsTaiwan_website_icon.png';
-import docIcon from '../images/g0v_NameIsTaiwan_doc_icon.png';
+import docIcon from '../images/known_icon.png';
 import sponsorIcon from '../images/icon_sponsors.png';
 import speakersIcon from '../images/icon_speakers.png';
 import mapImg from '../images/map.jpg';

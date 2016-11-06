@@ -23,9 +23,10 @@ export default class LandingCH extends React.Component {
     return (
       <div>
 
-        <Container className={styles.landingBody}>
+        <Container fluid={true} className={styles.landingBody}>
         	<Row>
-	          <Col md="8" md-offset="2">
+
+	          <Col md="12" md-offset="0">
               <div className={styles.hero}>
     	          <h3 className={styles.heading}>你也曾遇過一下國籍被誤認的困擾嗎？</h3>
     	          <p className={styles.bodyText}>留學生申請簽證或學校，海外開戶，申請工作，填寫申請ྛ式文件時，國籍找不到台灣(Taiwan/ROC) 而被迫選擇 PRC or Taiwan, Province of China?</p>
@@ -40,6 +41,8 @@ export default class LandingCH extends React.Component {
               	</a>
               </div>
 	          </Col>
+
+
           </Row>
           <Divider />
           <Row>

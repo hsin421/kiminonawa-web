@@ -41,7 +41,7 @@ export default class ChPages extends React.Component {
                 <Link to="/">
                   <img src={logo} className={styles.appBarLogo}/>
                 </Link>
-                <span 
+                <span
                   className={styles.hamburger}
                   onClick={this.handleHamburgerClick}
                 >
@@ -49,14 +49,14 @@ export default class ChPages extends React.Component {
                 </span>
               </Col>
               <Col md="7" className={styles.appBarNav}>
-                <Link to="/schedule" className={styles.navLink} activeClassName={styles.navLinkSelected}>活動流程</Link>
-                <Link to="/speakers" className={styles.navLink} activeClassName={styles.navLinkSelected}>講者介紹</Link>
+                <Link to="/schedule" className={styles.navLink} activeClassName={styles.navLinkSelected}>已知回報</Link>
+                <Link to="/speakers" className={styles.navLink} activeClassName={styles.navLinkSelected}>成功案例</Link>
                 <Link to="/staff" className={styles.navLink} activeClassName={styles.navLinkSelected}>工作人員</Link>
-                <a href="https://www.generosity.com/volunteer-fundraising/g0v-at-nyc-first-ever-hackathon" 
+                <a href="https://www.generosity.com/volunteer-fundraising/g0v-at-nyc-first-ever-hackathon"
                   target="_blank">
                   <Button color="accent" className={styles.navButton}>捐款</Button>
-                </a> 
-                <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746" 
+                </a>
+                <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746"
                   target="_blank">
                   <Button color="primary" className={styles.navButton}>報名</Button>
                 </a>

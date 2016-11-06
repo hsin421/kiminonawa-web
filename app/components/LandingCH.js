@@ -22,20 +22,22 @@ export default class LandingCH extends React.Component {
   render() {
     return (
       <div>
-        <div className={styles.hero}><img src="7ac319ad230437228aeb7f97d377abaf.jpg" className={styles.heroImg}/></div>
+
         <Container className={styles.landingBody}>
         	<Row>
 	          <Col md="8" md-offset="2">
-  	          <h3 className={styles.heading}>「紐」轉台灣 g0v黑客松</h3>
-  	          <p className={styles.bodyText}> 『不能沒有你！』你有一身程式設計的絕技卻渴望能一展身手嗎？ </p>
-  	          <p className={styles.bodyText}> 你的UI/UX與設計長才想讓更多人看見嗎？ </p>
-              <p className={styles.bodyText}> 你有一堆想讓這社會更好的創意點子嗎？ </p>
-              <p className={styles.bodyText}> 你知道座落在海外關於台灣的神秘檔案已經逐一開放，等這我們去探詢嗎？ </p>
-              <p className={styles.bodyText}> 海外的大秘寶需要熱血如你 一身絕技如你來參與 </p>
-              <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746" 
-              		target="_blank">
-            		<Button color="primary">我要報名</Button>
-            	</a>
+              <div className={styles.hero}>
+    	          <h3 className={styles.heading}>「紐」轉台灣 g0v黑客松</h3>
+    	          <p className={styles.bodyText}> 『不能沒有你！』你有一身程式設計的絕技卻渴望能一展身手嗎？ </p>
+    	          <p className={styles.bodyText}> 你的UI/UX與設計長才想讓更多人看見嗎？ </p>
+                <p className={styles.bodyText}> 你有一堆想讓這社會更好的創意點子嗎？ </p>
+                <p className={styles.bodyText}> 你知道座落在海外關於台灣的神秘檔案已經逐一開放，等這我們去探詢嗎？ </p>
+                <p className={styles.bodyText}> 海外的大秘寶需要熱血如你 一身絕技如你來參與 </p>
+                <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746"
+                		target="_blank">
+              		<Button color="primary">我要報名</Button>
+              	</a>
+              </div>
 	          </Col>
           </Row>
           <Divider />
@@ -60,7 +62,7 @@ export default class LandingCH extends React.Component {
               </p>
             	<h4 className={styles.infoLabel}>地點</h4>
             	<p className={styles.bodyTextBold}>NYC WeWork Times Square</p>
-            	<p className={styles.bodyText}>1460 Broadway, NY {'10036 '}  
+            	<p className={styles.bodyText}>1460 Broadway, NY {'10036 '}
                 <a className={styles.linkDecorated} href="https://www.google.com/maps/place/1460+Broadway,+New+York,+NY+10036/@40.7551113,-73.9884183,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259ab29218823:0x9ed7f9958f0596ca!8m2!3d40.7551073!4d-73.9862243" target="_blank">
                  Map
                 </a>
@@ -70,7 +72,7 @@ export default class LandingCH extends React.Component {
             	<p className={styles.bodyText}>...請自備電腦</p>
             	<h4 className={styles.infoLabel}>那餐點、過夜、旅費補助呢？</h4>
             	<p className={styles.bodyText}>我們寫了一個 chatbot 來回答你的問題，試試看！</p>
-            	<a href="https://m.me/g0vus" 
+            	<a href="https://m.me/g0vus"
               		target="_blank">
               	<Button color="primary">跟g0v bot聊聊</Button>
               </a>
@@ -87,7 +89,7 @@ export default class LandingCH extends React.Component {
                 	<p className={styles.bodyTextWhite}> 不論⾦額的⼤⼩，您的⽀持都讓我們距離上述目標更近⼀步。
   活動結束後，我們會將財務明細以及成果報告⽤電⼦郵件的⽅式寄給貴組織，
   持續分享各個專案的開發進度與成果。</p>
-                	<a href="https://www.generosity.com/volunteer-fundraising/g0v-at-nyc-first-ever-hackathon" 
+                	<a href="https://www.generosity.com/volunteer-fundraising/g0v-at-nyc-first-ever-hackathon"
                 		target="_blank">
                 		<Button color="accent">贊助資訊</Button>
                 	</a>
@@ -165,13 +167,13 @@ export default class LandingCH extends React.Component {
       				<h3 className={styles.heading}> 主辦單位 </h3>
       			</Col>
       			<Col md="6">
-      				<a href="http://g0v.tw" 
+      				<a href="http://g0v.tw"
               		target="_blank">
       					<img src={logo} height="100px" />
       				</a>
       			</Col>
       			<Col md="6">
-      				<a href="https://www.facebook.com/cafephiloatNY/" 
+      				<a href="https://www.facebook.com/cafephiloatNY/"
               		target="_blank">
       					<img src={cafePhiloLogo} height="100px" />
       				</a>
@@ -193,4 +195,3 @@ export default class LandingCH extends React.Component {
 		);
 	}
 }
-

@@ -121,6 +121,7 @@ a:hover {
 }
 
 .hero {
+  background-image: url('./images/feature-image.jpg');
   position: relative;
   overflow: hidden;
 }
@@ -189,7 +190,7 @@ a:hover {
   margin-bottom: 60px;
 }
 
-.bodyTextWhite { 
+.bodyTextWhite {
   composes: bodyText;
   color: white;
 }

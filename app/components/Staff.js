@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 import Appbar from 'muicss/lib/react/appbar';
 import Button from 'muicss/lib/react/button';
@@ -9,22 +10,42 @@ import Col from 'muicss/lib/react/col';
 import { Link } from 'react-router';
 
 import styles from '../styles.css';
-import staffIcon from '../images/icon_teams.png';
+import knownIcon from '../images/known_icon.png';
 import mapImg from '../images/map.jpg';
 import logo from '../images/organized_g0v.png';
 import logoDark from '../images/g0v_logo_dark.png';
 import cafePhiloLogo from '../images/organized_cafe_philo.png';
 
 export default class Staff extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.sate = {
+      items: []
+    };
+  }
+
+  componentDidMount() {
+    console.log('mount');
+    axios.get('http://nameistw.herokuapp.com/topic/')
+      .then(response => {
+        conssole.log(response.data);
+        // this.setState({});
+    });
+  }
+
   render() {
     return (
       <div>
         <Container className={styles.pageBody}>
           <Row className={styles.pageTop}>
           	<Col md="4" md-offset="4">
-          		<img src={staffIcon} className={styles.icon} />
-          		<h3 className={styles.heading}> 工作人員 </h3>
-          		<p className={styles.bodyText}> 感謝在紐約這群身懷絕技又願意為g0v努力不懈的「沒有人」！ </p>
+          		<img src={knownIcon} className={styles.icon} />
+          		<h3 className={styles.heading}> 已知回報 </h3>
+          		<p className={styles.bodyText}>
+                本頁為我們已收到的民眾通報清單，所有被舉報的網站都已收到由台灣人公共事務會 Formosan Association for Public Affairs 寄出的更改名稱要求，
+                如果您願意為此運動盡一份力，請按“加入舉報”由您的個人信箱寄出抗議信，讓負責單位聽到更多台灣人的聲音。
+              </p>
           	</Col>
           </Row>
           <Row>

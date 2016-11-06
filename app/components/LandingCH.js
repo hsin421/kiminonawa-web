@@ -59,6 +59,7 @@ export default class LandingCH extends React.Component {
             <Col md="8" md-offset="2" className={styles.eventInfo}>
               <img src={docIcon} className={styles.icon} />\
               <h1 className={styles.docIconText}>網頁回報案件</h1>
+
             </Col>
           </Row>
         </Container>

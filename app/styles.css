@@ -11,7 +11,8 @@ body {
 }
 
 .copyrightText {
-  color: #fff;
+  color: rgba(209, 210, 211, 1);
+  font: 6px;
 }
 
 .formText {

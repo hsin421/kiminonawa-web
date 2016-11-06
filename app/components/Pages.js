@@ -5,12 +5,12 @@ import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 import { Link } from 'react-router';
 import Button from 'muicss/lib/react/button';
-import styles from '../../styles.css';
-import logo from '../../images/organized_g0v.png';
-import logoDark from '../../images/g0v_logo_dark.png';
-import socialFacebook from '../../images/icon_facebook_green.png';
-import socialEmail from '../../images/icon_email_green.png';
-import socialGithub from '../../images/icon_github_green.png';
+import styles from '../styles.css';
+import logo from '../images/organized_g0v.png';
+import logoDark from '../images/g0v_logo_dark.png';
+import socialFacebook from '../images/icon_facebook_green.png';
+import socialEmail from '../images/icon_email_green.png';
+import socialGithub from '../images/icon_github_green.png';
 import LandingCH from './LandingCH';
 import Container from 'muicss/lib/react/container';
 import Dropdown from 'muicss/lib/react/dropdown';
@@ -75,7 +75,6 @@ export default class ChPages extends React.Component {
             <li className={styles.headerItemResponsive}><Link to="/schedule" onClick={this.handleHamburgerClick}>活動流程</Link> </li>
             <li className={styles.headerItemResponsive}><Link to="/speakers" onClick={this.handleHamburgerClick}>講者介紹</Link> </li>
             <li className={styles.headerItemResponsive}><Link to="/staff" onClick={this.handleHamburgerClick}>工作人員</Link> </li>
-            <li className={styles.headerItemResponsive}><Link to="/en" onClick={this.handleHamburgerClick}>ENGLISH</Link> </li>
             <li className={styles.headerItemResponsive}>
               <a className={styles.socialIcon} href="https://www.facebook.com/g0vus/" target="_blank"><img src={socialFacebook} /></a>
               <a className={styles.socialIcon} href="https://github.com/hsin421/g0vnyc-landing" target="_blank"><img src={socialGithub} /></a>

@@ -8,16 +8,17 @@ import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 import { Link } from 'react-router';
 
-import styles from '../../styles.css';
-import calendarIcon from '../../images/icon_event.png';
-import sponsorIcon from '../../images/icon_sponsors.png';
-import speakersIcon from '../../images/icon_speakers.png';
-import mapImg from '../../images/map.jpg';
-import logo from '../../images/organized_g0v.png';
-import logoDark from '../../images/g0v_logo_dark.png';
-import cafePhiloLogo from '../../images/organized_cafe_philo.png';
+import styles from '../styles.css';
+import calendarIcon from '../images/icon_event.png';
+import sponsorIcon from '../images/icon_sponsors.png';
+import speakersIcon from '../images/icon_speakers.png';
+import mapImg from '../images/map.jpg';
+import logo from '../images/organized_g0v.png';
+import logoDark from '../images/g0v_logo_dark.png';
+import cafePhiloLogo from '../images/organized_cafe_philo.png';
+import liPhoto from '../images/li.jpg';
 
-export default class LandingEN extends React.Component {
+export default class LandingCH extends React.Component {
   render() {
     return (
       <div>
@@ -25,13 +26,15 @@ export default class LandingEN extends React.Component {
         <Container className={styles.landingBody}>
         	<Row>
 	          <Col md="8" md-offset="2">
-  	          <h3 className={styles.heading}> 2016 g0v hackathon @ NYC</h3>
-  	          <p className={styles.bodyText}> g0v.tw is an online community that pushes information transparency, focusing on developing information platform and tools for the citizens to participate in society.
-  	          Substituting the “o” with “0″ in gov, the new “g0v” not only stands for rethinking the role that the government plays from the bottom up, but also represents the world view of 0 and 1 in the digital natives generation. Based on the spirit of open source, g0v cares about freedom of speech and open data, writing code to provide citizens the easy-to-use information service. The transparency of information can help citizens to have a better understanding on how the government works, to understand the issues faster and to avoid media monopoly, so they can monitor the government more efficiently, and become involved in actions and finally deepen the quality of democracy.
-  	          </p>
+  	          <h3 className={styles.heading}>「紐」轉台灣 g0v黑客松</h3>
+  	          <p className={styles.bodyText}> 『不能沒有你！』你有一身程式設計的絕技卻渴望能一展身手嗎？ </p>
+  	          <p className={styles.bodyText}> 你的UI/UX與設計長才想讓更多人看見嗎？ </p>
+              <p className={styles.bodyText}> 你有一堆想讓這社會更好的創意點子嗎？ </p>
+              <p className={styles.bodyText}> 你知道座落在海外關於台灣的神秘檔案已經逐一開放，等這我們去探詢嗎？ </p>
+              <p className={styles.bodyText}> 海外的大秘寶需要熱血如你 一身絕技如你來參與 </p>
               <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746" 
               		target="_blank">
-            		<Button color="primary">Registration</Button>
+            		<Button color="primary">我要報名</Button>
             	</a>
 	          </Col>
           </Row>
@@ -39,7 +42,7 @@ export default class LandingEN extends React.Component {
           <Row>
           	<Col md="4" md-offset="4">
           		<img src={calendarIcon} className={styles.icon} />
-          		<h3 className={styles.heading}> Information </h3>
+          		<h3 className={styles.heading}> 活動資訊 </h3>
           	</Col>
             <Col md="6">
             	<a href="https://www.google.com/maps/place/1460+Broadway,+New+York,+NY+10036/@40.7551113,-73.9884183,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259ab29218823:0x9ed7f9958f0596ca!8m2!3d40.7551073!4d-73.9862243" target="_blank">
@@ -47,7 +50,7 @@ export default class LandingEN extends React.Component {
             	</a>
             </Col>
             <Col md="6" className={styles.eventInfo}>
-            	<h4 className={styles.infoLabel}>Date</h4>
+            	<h4 className={styles.infoLabel}>資訊</h4>
             	<p className={styles.bodyTextBold}> 11/5 (Sat) - 11/6 (Sun) </p>
             	<p className={styles.bodyText}>
                 <a className={styles.linkDecorated} href='http://www.accuweather.com/en/us/new-york-ny/10007/daily-weather-forecast/349727?day=43' target="_blank">
@@ -55,21 +58,21 @@ export default class LandingEN extends React.Component {
                 </a>
                   {' Working'} overnight is optional.
               </p>
-            	<h4 className={styles.infoLabel}>Location</h4>
+            	<h4 className={styles.infoLabel}>地點</h4>
             	<p className={styles.bodyTextBold}>NYC WeWork Times Square</p>
             	<p className={styles.bodyText}>1460 Broadway, NY {'10036 '}  
                 <a className={styles.linkDecorated} href="https://www.google.com/maps/place/1460+Broadway,+New+York,+NY+10036/@40.7551113,-73.9884183,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259ab29218823:0x9ed7f9958f0596ca!8m2!3d40.7551073!4d-73.9862243" target="_blank">
                  Map
                 </a>
               </p>
-            	<h4 className={styles.infoLabel}>Who should attend</h4>
-            	<p className={styles.bodyTextBold}>You and your love for open gov / open data</p>
-            	<p className={styles.bodyText}>...and your laptop</p>
-            	<h4 className={styles.infoLabel}>How about food, overnight stay, or travel grant？</h4>
-            	<p className={styles.bodyText}>We wrote a chatbot to answer them. Give it a try！</p>
+            	<h4 className={styles.infoLabel}>招募對象</h4>
+            	<p className={styles.bodyTextBold}>熱血如火的你！</p>
+            	<p className={styles.bodyText}>...請自備電腦</p>
+            	<h4 className={styles.infoLabel}>那餐點、過夜、旅費補助呢？</h4>
+            	<p className={styles.bodyText}>我們寫了一個 chatbot 來回答你的問題，試試看！</p>
             	<a href="https://m.me/g0vus" 
               		target="_blank">
-              	<Button color="primary">Say hi our bot</Button>
+              	<Button color="primary">跟g0v bot聊聊</Button>
               </a>
             </Col>
           </Row>
@@ -80,16 +83,13 @@ export default class LandingEN extends React.Component {
               <div className={styles.sponsor}>
             	  <Col md="6" md-offset="3">
                   <img src={sponsorIcon} className={styles.icon} />
-                	<h3 className={styles.heading}> Sponsor Us</h3>
-                	<p className={styles.bodyTextWhite}> 
-                		Hackathons don't host themselves. We need all the help we can get! 
-                    Our invited speakers fly from all over the world to NYC. 
-                		We reimburse out-of-state hackers and at the event, dishes of Taiwanese delicacies will flow in endless supply. 
-                		Chip in to help make this an unforgettable experience for our hackers, speakers and staff!
-                	</p>
+                	<h3 className={styles.heading}> 贊助我們 </h3>
+                	<p className={styles.bodyTextWhite}> 不論⾦額的⼤⼩，您的⽀持都讓我們距離上述目標更近⼀步。
+  活動結束後，我們會將財務明細以及成果報告⽤電⼦郵件的⽅式寄給貴組織，
+  持續分享各個專案的開發進度與成果。</p>
                 	<a href="https://www.generosity.com/volunteer-fundraising/g0v-at-nyc-first-ever-hackathon" 
                 		target="_blank">
-                		<Button color="accent">Donate</Button>
+                		<Button color="accent">贊助資訊</Button>
                 	</a>
                 </Col>
               </div>
@@ -101,7 +101,7 @@ export default class LandingEN extends React.Component {
             <Row className={styles.speakerHeader}>
   	          <Col md="4" md-offset="4">
   	    	  		<img src={speakersIcon} className={styles.icon} />
-  	      			<h3 className={styles.heading}> Speakers </h3>
+  	      			<h3 className={styles.heading}> 邀請講者 </h3>
   	      		</Col>
   	      	</Row>
   	      	<Row className={styles.speakerSection}>
@@ -110,9 +110,9 @@ export default class LandingEN extends React.Component {
                   <div className={styles.speakerImgLin}>
                   </div>
                   <div className={styles.speakerInfo}>
-  	      			   <h5 className={styles.speakerTitle}>Billy Lin</h5>
-                   <p className={styles.speakerSubtitle}>Judicial Reform Foundation, Taiwan</p>
-                   <p className={styles.speakerSubtitle}>Committee of Ill Gotten Party Assets, Executive Yuan, Taiwan</p>
+  	      			   <h5 className={styles.speakerTitle}>林雨蒼</h5>
+                   <p className={styles.speakerSubtitle}>民間司法改革基金會</p>
+                   <p className={styles.speakerSubtitle}>行政院不當黨產委員會</p>
                   </div>
                 </div>
   	      		</Col>
@@ -121,9 +121,9 @@ export default class LandingEN extends React.Component {
                   <div className={styles.speakerImgKao}>
                   </div>
                   <div className={styles.speakerInfo}>
-                   <h5 className={styles.speakerTitle}>CL Kao</h5>
-                   <p className={styles.speakerSubtitle}>G0V Founder</p>
-                   <p className={styles.speakerSubtitle}>Taiwanese open source community</p>
+                   <h5 className={styles.speakerTitle}>高嘉良</h5>
+                   <p className={styles.speakerSubtitle}>G0V 創始人</p>
+                   <p className={styles.speakerSubtitle}>台灣開源社群 長老</p>
                   </div>
                 </div>
   	      		</Col>
@@ -138,24 +138,23 @@ export default class LandingEN extends React.Component {
                   </div>
                 </div>
   	      		</Col>
-  	      		{/*<Button color="primary" className={styles.speakerButton}>認識講者</Button>*/}
         		</Row>
             <Row className={styles.speakerSection}>
-              <p className={styles.bodyTextBold}>There's More...</p>
-              <p className={styles.bodyText}>11.4 Friday Night Cafe Philo「Hackaton Series」Speaker</p>
+              <p className={styles.bodyTextBold}>同場加映</p>
+              <p className={styles.bodyText}>11.4 週五晚上 哲學星期五「黑客松系列講座」講者</p>
               <Col md="4" md-offset="4">
                 <div className={styles.speakerCard}>
                   <div className={styles.speakerImgLi}>
                   </div>
                   <div className={styles.speakerInfo}>
-                   <h5 className={styles.speakerTitle}>Li, Wu-Hsi</h5>
+                   <h5 className={styles.speakerTitle}>李務熙</h5>
                    <p className={styles.speakerSubtitle}>MIT Media Lab PhD</p>
-                   <p className={styles.speakerSubtitle}>InMusic Founder</p>
+                   <p className={styles.speakerSubtitle}>InMusic 創辦人</p>
                   </div>
                 </div>
               </Col>
               <Col md="12">
-                <Link to="/speakers"><Button color="primary" className={styles.speakerButton}>More on Speakers</Button></Link>
+                <Link to="/speakers"><Button color="primary" className={styles.speakerButton}>認識講者</Button></Link>
               </Col>
             </Row>
           </Container>
@@ -163,7 +162,7 @@ export default class LandingEN extends React.Component {
         <Container className={styles.landingBody}>
       		<Row>
       			<Col md="4" md-offset="4">
-      				<h3 className={styles.heading}> Host </h3>
+      				<h3 className={styles.heading}> 主辦單位 </h3>
       			</Col>
       			<Col md="6">
       				<a href="http://g0v.tw" 
@@ -181,16 +180,17 @@ export default class LandingEN extends React.Component {
           <Divider />
       		<Row>
       			<Col md="4" md-offset="4">
-      				<h3 className={styles.heading}> Sponsors </h3>
+      				<h3 className={styles.heading}> 贊助單位 </h3>
       			</Col>
       			<Col md="8" md-offset="2">
               <div className={styles.bodyTextBottom}>
-      				  Overseas Taiwanese for Democracy | G0VUS | TLA Law | C Bao | Taiwan Bear House
+      				  海台青 | 美東G0V | 達里律師事務所 | C Bao 餐館 | Taiwan Bear House
               </div>
       			</Col>
       		</Row>
         </Container>
-      </div>
-    );
-  }
+			</div>
+		);
+	}
 }
+

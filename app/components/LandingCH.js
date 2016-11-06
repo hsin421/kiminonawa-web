@@ -40,7 +40,6 @@ export default class LandingCH extends React.Component {
 
         <Container fluid={true} className={styles.landingBody}>
         	<Row>
-
 	          <Col md="12" md-offset="0" style={fluidCol}>
               <div className={styles.hero}>
     	          <h3 className={styles.headingWhiteText}>你也曾遇過一下國籍被誤認的困擾嗎？</h3>
@@ -84,12 +83,46 @@ export default class LandingCH extends React.Component {
             </Col>
 
 
-            <Col md="6" md-offset="3" className={styles.eventInfo}>
+            <Col md="8" md-offset="2" className={styles.eventInfo}>
               <div className={styles.iconWrap}>
                 <img src={docIcon} className={styles.icon} />
               </div>
               <h1 className={styles.docIconText}>網頁回報案件</h1>
+              <Form>
+                <Col md="5" md-offset="1">
+                  <legend><h6 className={styles.formtext}>網站所有者</h6></legend>
+                  <Input hint="機構網站名稱, 如Costco" />
+                </Col>
+                <Col md="5" md-offset="1">
+                  <legend><h6 className={styles.formtext}>問題網址</h6></legend>
+                  <Input hint="王小明" />
+                </Col>
 
+                <Col md="5" md-offset="1">
+                  <legend><h6 className={styles.formtext}>您的姓名</h6></legend>
+                  <Input hint="user@email.com" />
+                </Col>
+                <Col md="5" md-offset="1">
+                  <legend><h6 className={styles.formtext}>您的信箱</h6></legend>
+                  <Input hint="http://www.url.com/page" />
+                </Col>
+
+                <Col md="5" md-offset="1">
+                  <legend><h6 className={styles.formtext}>公司負責人信箱 (Optional)</h6></legend>
+                  <Input hint="company@email.com" />
+                </Col>
+                <Col md="5" md-offset="1">
+                  <legend><h6 className={styles.formtext}>上傳螢幕截圖 (Optional)</h6></legend>
+                  <Input hint="選擇上傳圖片" />
+                </Col>
+                <Col md="10" md-offset="1">
+                  <legend><h6 className={styles.formtext}>詳細敘述 (Optional)</h6></legend>
+                  <Textarea hint="請詳細指出名稱誤植處" />
+                </Col>
+                <Col md="5" md-offset="5">
+                  <Button className={styles.heroBtn} variant="raised">回覆</Button>
+                </Col>
+              </Form>
             </Col>
           </Row>
         </Container>
@@ -98,18 +131,8 @@ export default class LandingCH extends React.Component {
       			<Col md="4" md-offset="4">
       				<h3 className={styles.heading}> 主辦單位 </h3>
       			</Col>
-      			<Col md="6">
-      				<a href="http://g0v.tw"
-              		target="_blank">
-      					<img src={logo} height="100px" />
-      				</a>
-      			</Col>
-      			<Col md="6">
-      				<a href="https://www.facebook.com/cafephiloatNY/"
-              		target="_blank">
-      					<img src={cafePhiloLogo} height="100px" />
-      				</a>
-      			</Col>
+
+
       		</Row>
           <Divider />
       		<Row>

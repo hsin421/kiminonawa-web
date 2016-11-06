@@ -84,7 +84,7 @@ export default class ChPages extends React.Component {
              <Container>
               <Row>
                 <Col md="12">
-                  <img src={logoDark} height="20px" className={styles.footerLogo}/>
+                  <p className={styles.copyrightText}>&copy; 2016 台灣正名. All Rights Reserved.</p>
                 </Col>
               </Row>
             </Container>

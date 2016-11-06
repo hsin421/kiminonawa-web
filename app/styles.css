@@ -10,6 +10,13 @@ body {
   line-height: 1.5;
 }
 
+.copyrightText {
+  color: #fff;
+}
+
+.formText {
+  color: rgba(70, 71, 72, 1);
+}
 
 .linkDecorated {
   text-decoration: underline;
@@ -74,7 +81,7 @@ a:hover {
 
   border-radius: 18px;
   border-width: 0;
-  font-size: 12px; 
+  font-size: 12px;
 }
 
 .navButton:hover, .navButton:active, .navButton:focus {

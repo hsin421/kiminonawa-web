@@ -9,11 +9,11 @@ import Col from 'muicss/lib/react/col';
 import { Link } from 'react-router';
 
 import styles from '../styles.css';
-import calendarIcon from '../images/icon_event.png';
+import websiteIcon from '../images/g0v_NameIsTaiwan_website_icon.png';
 import sponsorIcon from '../images/icon_sponsors.png';
 import speakersIcon from '../images/icon_speakers.png';
 import mapImg from '../images/map.jpg';
-import logo from '../images/organized_g0v.png';
+import logo from '../images/NameIsTaiwan_logo.png';
 import logoDark from '../images/g0v_logo_dark.png';
 import cafePhiloLogo from '../images/organized_cafe_philo.png';
 import liPhoto from '../images/li.jpg';
@@ -27,24 +27,27 @@ export default class LandingCH extends React.Component {
         	<Row>
 	          <Col md="8" md-offset="2">
               <div className={styles.hero}>
-    	          <h3 className={styles.heading}>「紐」轉台灣 g0v黑客松</h3>
-    	          <p className={styles.bodyText}> 『不能沒有你！』你有一身程式設計的絕技卻渴望能一展身手嗎？ </p>
-    	          <p className={styles.bodyText}> 你的UI/UX與設計長才想讓更多人看見嗎？ </p>
-                <p className={styles.bodyText}> 你有一堆想讓這社會更好的創意點子嗎？ </p>
-                <p className={styles.bodyText}> 你知道座落在海外關於台灣的神秘檔案已經逐一開放，等這我們去探詢嗎？ </p>
+    	          <h3 className={styles.heading}>你也曾遇過一下國籍被誤認的困擾嗎？</h3>
+    	          <p className={styles.bodyText}>留學生申請簽證或學校，海外開戶，申請工作，填寫申請ྛ式文件時，國籍找不到台灣(Taiwan/ROC) 而被迫選擇 PRC or Taiwan, Province of China?</p>
+    	          <p className={styles.bodyText}></p>
+                <p className={styles.bodyText}></p>
+                <p className={styles.bodyText}></p>
                 <p className={styles.bodyText}> 海外的大秘寶需要熱血如你 一身絕技如你來參與 </p>
                 <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746"
                 		target="_blank">
-              		<Button color="primary">我要報名</Button>
+              		<Button color="primary">網頁回報</Button>
+                  <Button color="primary">下載Extensions</Button>
               	</a>
               </div>
 	          </Col>
           </Row>
           <Divider />
           <Row>
-          	<Col md="4" md-offset="4">
-          		<img src={calendarIcon} className={styles.icon} />
-          		<h3 className={styles.heading}> 活動資訊 </h3>
+          	<Col md="8" md-offset="2">
+          		<img src={websiteIcon} className={styles.icon} />
+              <p>這些狀況都是多年來海外遊子不斷遇到的困擾與心酸，甚至造成許多不便之處．要改善這個狀況，需要大家站出來出聲反應，讓這些海外機關及更多人知道，我們來自台灣</p>
+              <p>本網站設置的目的，是提供海外台人一個通報的平台，來改善這個狀況，集結群眾的力量為台灣正名。我們收到通報之後，經過查證屬實，將以北美FAPA(Formosan Association for Public Affairs)名義向該機關提出正名要求，並追蹤ヱ機構是否回應訴求．這些年北美FAPA致力於正名活動，已向許多官方及民間機構提出訴求並成功正名，其中包含：移民署，FDA，Apple...等等．不要再讓台灣人在海外被吃豆腐了，一起動起來為台灣正名！</p>
+          		<h3 className={styles.heading}>網頁回報案件</h3>
           	</Col>
             <Col md="6">
             	<a href="https://www.google.com/maps/place/1460+Broadway,+New+York,+NY+10036/@40.7551113,-73.9884183,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259ab29218823:0x9ed7f9958f0596ca!8m2!3d40.7551073!4d-73.9862243" target="_blank">

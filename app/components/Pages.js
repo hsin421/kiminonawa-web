@@ -32,8 +32,6 @@ export default class ChPages extends React.Component {
 
   render() {
   	const { children } = this.props;
-
-    let s1 = {verticalAlign: 'middle'};
     return (
       <div>
         <Appbar className={styles.bar}>
@@ -56,11 +54,10 @@ export default class ChPages extends React.Component {
                 <Link to="/about" className={styles.navLink} activeClassName={styles.navLinkSelected}>關於正名</Link>
               </Col>
               <Col md="5" className={styles.appBarExtra}>
-                <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746"
-                    target="_blank">
+                <a href="#reportForm">
                   <Button color="primary" className={styles.navButton}>網頁回報</Button>
                 </a>
-                <a href="https://www.generosity.com/volunteer-fundraising/g0v-at-nyc-first-ever-hackathon"
+                <a href="https://github.com/acsalu/Kiminonawa"
                   target="_blank">
                   <Button color="accent" className={styles.navButton}>下載Chrome Extension</Button>
                 </a>
@@ -75,10 +72,6 @@ export default class ChPages extends React.Component {
             <li className={styles.headerItemResponsive}><Link to="/known" onClick={this.handleHamburgerClick}>已知回報</Link> </li>
             <li className={styles.headerItemResponsive}><Link to="/success" onClick={this.handleHamburgerClick}>成功案例</Link> </li>
             <li className={styles.headerItemResponsive}><Link to="/about" onClick={this.handleHamburgerClick}>關於正名</Link> </li>
-            <li className={styles.headerItemResponsive}>
-              <a className={styles.socialIcon} href="https://www.facebook.com/g0vus/" target="_blank"><img src={socialFacebook} /></a>
-              <a className={styles.socialIcon} href="https://github.com/hsin421/g0vnyc-landing" target="_blank"><img src={socialGithub} /></a>
-            </li>
           </ul>
         }
        	{children}

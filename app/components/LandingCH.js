@@ -87,7 +87,7 @@ export default class LandingCH extends React.Component {
               <div className={styles.iconWrap}>
                 <img src={docIcon} className={styles.icon} />
               </div>
-              <h1 className={styles.docIconText}>網頁回報案件</h1>
+              <h1 id="reportForm" className={styles.docIconText}>網頁回報案件</h1>
               <Form>
                   <Col md="5" md-offset="1">
                     <legend><h6 className={styles.formtext}>網站所有者</h6></legend>

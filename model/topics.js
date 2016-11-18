@@ -1,3 +1,6 @@
+'use strict';
+
+//Import dependency
 var mongoose = require('mongoose');
 
 var TopicSchema = new mongoose.Schema({
@@ -14,4 +17,5 @@ var TopicSchema = new mongoose.Schema({
   date: { type: Date, default: Date.now }
 });
 
+//Export our module to use in server.js
 module.exports = mongoose.model('Topic', TopicSchema);

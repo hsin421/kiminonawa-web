@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import Pages from './components/Pages';
 import LandingCH from './components/LandingCH';
 import Staff from './components/Known';
@@ -23,4 +23,9 @@ class App extends React.Component {
   }
 }
 
-render(<App />, document.getElementById('app'));
+ReactDOM.render(
+  <App
+    url='http://localhost:3001/api/topics'
+    pollInterval={2000} />,
+  document.getElementById('app')
+);

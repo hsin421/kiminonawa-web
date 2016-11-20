@@ -47,7 +47,7 @@ router.route('/topics')
   //Retrieve all topics from the database
   .get(function(req, res) {
     //Looks at our Topic Schema
-    Topic.find(function(err, topics) {
+    Topic.find({}).exec(function(err, topics) {
       if (err)
         res.send(err);
       //Responds with a json object of our database topics.

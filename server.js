@@ -6,6 +6,9 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var Topic = require('./model/topics');
 
+// plug in ES6 Promise for mongoose
+mongoose.Promise = global.Promise;
+
 //Create instances
 var app = express();
 var router = express.Router();
@@ -53,14 +56,13 @@ router.route('/topics')
   })
   //Post new topic to the database
   .post(function(req, res) {
-    var topic = new Topic();
-    (req.body.author) ? topic.author = req.body.author : null;
-    (req.body.text) ? topic.text = req.body.text : null;
 
-    topic.save(function(err) {
-      if (err)
-        res.send(err);
-      res.json({ message: 'Topic successfully added!' });
+    Topic.create(req.body, function (err) {
+      if (err) {
+        console.log(err);
+        res.status(400).send(err);
+      }
+      res.status(200).send('Added successfully');
     });
   });
 

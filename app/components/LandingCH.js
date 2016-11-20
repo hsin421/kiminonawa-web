@@ -12,8 +12,60 @@ import { Link } from 'react-router';
 
 import styles from '../styles.css';
 import websiteIcon from '../images/g0v_NameIsTaiwan_website_icon.png';
+import docIcon from '../images/known_icon.png';
+import logo from '../images/NameIsTaiwan_logo.png';
+import axios from 'axios';
 
 export default class LandingCH extends React.Component {
+  constructor(prop, context) {
+    super(prop, context);
+    this.state = {
+      organization: null,
+      organizationEmail: null,
+      situation: null,
+      userName: null,
+      userEmail: null,
+      imgUrl: null
+    };
+  }
+
+  _onChangeOrg = (event) => {
+    this.setState({organization: event.target.value});
+  }
+
+  _onChangeOrgEmail = (event) => {
+    this.setState({organizationEmail: event.target.value});
+  }
+
+  _onChangeSituation = (event) => {
+    this.setState({situation: event.target.value});
+  }
+
+  _onChangeName = (event) => {
+    this.setState({userName: event.target.value});
+  }
+
+  _onChangeEmail = (event) => {
+    this.setState({userEmail: event.target.value});
+  }
+
+   _onChangeUrl = (event) => {
+    this.setState({url: event.target.value});
+  }
+
+  _onSave = () => {
+    axios.post('http://localhost:3001/api/topics', this.state)
+    .then(response => {
+      console.log(response);
+      if (response.status === 200) {
+        this.setState( { hasReported: true} );
+      }
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
   render() {
 
     var fluidCol = {
@@ -79,41 +131,51 @@ export default class LandingCH extends React.Component {
                 <img src={docIcon} className={styles.icon} />
               </div>
               <h1 id="reportForm" className={styles.docIconText}>網頁回報案件</h1>
-              <Form>
-                  <Col md="5" md-offset="1">
-                    <legend><h6 className={styles.formtext}>網站所有者</h6></legend>
-                    <Input hint="機構網站名稱, 如Costco" />
-                  </Col>
-                  <Col md="5" md-offset="1">
-                    <legend><h6 className={styles.formtext}>問題網址</h6></legend>
-                    <Input hint="王小明" />
-                  </Col>
+              {this.state.hasReported ? 
+                (
+                  <div className={styles.bodyTextWrap}>
+                    <p> 感謝您的通報，我們會立即處理！ </p>
+                  </div>
+                )
+                :
+                (
+                  <Form>
+                      <Col md="5" md-offset="1">
+                        <legend><h6 className={styles.formtext}>網站所有者</h6></legend>
+                        <Input hint="機構網站名稱, 如Costco" onChange={this._onChangeOrg}/>
+                      </Col>
+                      <Col md="5" md-offset="1">
+                        <legend><h6 className={styles.formtext}>問題網址</h6></legend>
+                        <Input hint="http://www.url.com/page" onChange={this._onChangeUrl} />
+                      </Col>
 
-                  <Col md="5" md-offset="1">
-                    <legend><h6 className={styles.formtext}>您的姓名</h6></legend>
-                    <Input hint="user@email.com" />
-                  </Col>
-                  <Col md="5" md-offset="1">
-                    <legend><h6 className={styles.formtext}>您的信箱</h6></legend>
-                    <Input hint="http://www.url.com/page" />
-                  </Col>
+                      <Col md="5" md-offset="1">
+                        <legend><h6 className={styles.formtext}>您的姓名</h6></legend>
+                        <Input hint="王小明" onChange={this._onChangeName} />
+                      </Col>
+                      <Col md="5" md-offset="1">
+                        <legend><h6 className={styles.formtext}>您的信箱</h6></legend>
+                        <Input hint="user@email.com" onChange={this._onChangeEmail} />
+                      </Col>
 
-                  <Col md="5" md-offset="1">
-                    <legend><h6 className={styles.formtext}>公司負責人信箱 (Optional)</h6></legend>
-                    <Input hint="company@email.com" />
-                  </Col>
-                  <Col md="5" md-offset="1">
-                    <legend><h6 className={styles.formtext}>上傳螢幕截圖 (Optional)</h6></legend>
-                    <Input hint="選擇上傳圖片" />
-                  </Col>
-                  <Col md="10" md-offset="1">
-                    <legend><h6 className={styles.formtext}>詳細敘述 (Optional)</h6></legend>
-                    <Textarea hint="請詳細指出名稱誤植處" />
-                  </Col>
-                  <Col md="5" md-offset="5">
-                    <Button className={styles.heroBtn} variant="raised">回覆</Button>
-                  </Col>
-              </Form>
+                      <Col md="5" md-offset="1">
+                        <legend><h6 className={styles.formtext}>公司負責人信箱 (Optional)</h6></legend>
+                        <Input hint="company@email.com" onChange={this._onChangeOrgEmail} />
+                      </Col>
+                      <Col md="5" md-offset="1">
+                        <legend><h6 className={styles.formtext}>上傳螢幕截圖 (Optional)</h6></legend>
+                        <Input hint="選擇上傳圖片" />
+                      </Col>
+                      <Col md="10" md-offset="1">
+                        <legend><h6 className={styles.formtext}>詳細敘述 (Optional)</h6></legend>
+                        <Textarea hint="請詳細指出名稱誤植處" onChange={this._onChangeSituation} />
+                      </Col>
+                      <Col md="5" md-offset="5">
+                        <Button className={styles.heroBtn} variant="raised" onClick={this._onSave}>回覆</Button>
+                      </Col>
+                  </Form>
+                )
+              }
             </Col>
           </Row>
         </Container>

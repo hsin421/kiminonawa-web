@@ -5,9 +5,9 @@ import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 
 import styles from '../styles.css';
-import demoImage from '../images/success-demo-img.jpg';
+import demoImage from '../images/known-demo-img.jpg';
 
-export default class Succss extends React.Component {
+export default class KnownDemo extends React.Component {
   render() {
     return (
       <div>

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Appbar from 'muicss/lib/react/appbar';
 import Button from 'muicss/lib/react/button';
 import Form from 'muicss/lib/react/form';
 import Input from 'muicss/lib/react/input';
@@ -13,14 +12,6 @@ import { Link } from 'react-router';
 
 import styles from '../styles.css';
 import websiteIcon from '../images/g0v_NameIsTaiwan_website_icon.png';
-import docIcon from '../images/known_icon.png';
-import sponsorIcon from '../images/icon_sponsors.png';
-import speakersIcon from '../images/icon_speakers.png';
-import mapImg from '../images/map.jpg';
-import logo from '../images/NameIsTaiwan_logo.png';
-import logoDark from '../images/g0v_logo_dark.png';
-import cafePhiloLogo from '../images/organized_cafe_philo.png';
-import liPhoto from '../images/li.jpg';
 
 export default class LandingCH extends React.Component {
   render() {

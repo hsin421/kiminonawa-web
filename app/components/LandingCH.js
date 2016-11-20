@@ -90,11 +90,10 @@ export default class LandingCH extends React.Component {
       	          <p className={styles.bodyWhiteText}>留學生申請簽證或學校，海外開戶，申請工作，填寫申請各式文件時，國籍找不到台灣(Taiwan/ROC) 而被迫選擇 PRC or Taiwan, Province of China?
 海外的大秘寶需要熱血如你 一身絕技如你來參與 </p>
                 </div>
-                <a href="https://www.eventbrite.com/e/g0v-hackathon-nyc-tickets-27621197746"
-                		target="_blank">
-              		<Button className={styles.heroBtn} color="primary">網頁回報</Button>
-                  <Button className={styles.heroBtn} color="primary">下載 Chrome Extensions</Button>
-              	</a>
+            		<a href="#reportForm"><Button className={styles.heroBtn} color="primary">網頁回報</Button></a>
+                <a href="https://github.com/acsalu/Kiminonawa"
+                  target="_blank"><Button className={styles.heroBtn} color="primary">下載 Chrome Extensions</Button>
+                </a>
               </div>
 	          </Col>
 

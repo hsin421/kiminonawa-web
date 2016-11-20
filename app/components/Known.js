@@ -13,7 +13,7 @@ import styles from '../styles.css';
 import knownIcon from '../images/known_icon.png';
 
 // sample data
-const data = [  
+const sampleData = [  
    {  
       "_id":"57d77205e2f4ec0e00304cea",
       "caseId":"1473737221646",
@@ -48,22 +48,24 @@ export default class Known extends React.Component {
   constructor(props) {
     super(props);
 
-    this.sate = {
-      items: []
+    this.state = {
+      data: []
     };
   }
 
   componentDidMount() {
-    console.log('mount');
-    // axios.get('http://localhost:3001/topics')
-    //   .then(response => {
-    //     console.log(response.data);
-    //     // this.setState({});
-    // });
+    axios.get('http://localhost:3001/api/topics')
+      .then(response => {
+        this.setState({data: response.data});
+    });
   }
 
   _getCases() {
-    return data.map(record => (
+    const {data} = this.state;
+    const records = data && !!data.length ?
+      data : sampleData;
+
+    return records.map(record => (
         <Case situation={record.situation} 
           url={record.url} 
           imgUrl={record.imgUrl} 

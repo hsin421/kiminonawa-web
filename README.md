@@ -2,17 +2,15 @@
 
 Click [here](https://www.dropbox.com/sh/ajahog74i6iyfye/AABMjWupsaWifbHgpkmIvDXRa?dl=0&preview=g0v_nameistw_1_01.jpg) to find the design assets for this page.
 
-## To set up frontend
+## To set up the web application
 - `git clone` this repo
 - `npm install`
 - `npm run dev`
-- open up browser `localhost:8080`
+- open up browser `localhost:8080` to visit the landing page; meanwhile, the API server will be serving endpoings on `localhost:3001/api`
 
-## To set up backend
+## To set up a local databse
 - install mongodb (for exmaple `brew update && install mongodb`)
 - in one terminal console `mongod` to start mongo server
-- in another terminal console `node server.js`
-- API server will be serving endpoings on `localhost:3001/api`
 
 Please help this page go up ASAP :)
 

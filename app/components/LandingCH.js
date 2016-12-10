@@ -15,6 +15,7 @@ import websiteIcon from '../images/g0v_NameIsTaiwan_website_icon.png';
 import docIcon from '../images/known_icon.png';
 import logo from '../images/NameIsTaiwan_logo.png';
 import axios from 'axios';
+import ReactS3Uploader from 'react-s3-uploader';
 
 export default class LandingCH extends React.Component {
   constructor(prop, context) {
@@ -64,6 +65,11 @@ export default class LandingCH extends React.Component {
     .catch(function (error) {
       console.log(error);
     });
+  }
+
+  _handleUploadFinish = (uploadResult) => {
+    const imgUrl = `https://nationa-treasure-uploader.herokuapp.com${uploadResult.publicUrl}`;
+    this.setState({ imgUrl });
   }
 
   render() {
@@ -163,7 +169,13 @@ export default class LandingCH extends React.Component {
                       </Col>
                       <Col md="5" md-offset="1">
                         <legend><h6 className={styles.formtext}>上傳螢幕截圖 (Optional)</h6></legend>
-                        <Input hint="選擇上傳圖片" />
+                         <ReactS3Uploader
+                          signingUrl="https://nationa-treasure-uploader.herokuapp.com/s3/sign"
+                          accept="image/*"
+                          onFinish={this._handleUploadFinish}
+                          uploadRequestHeaders={{ 'x-amz-acl': 'public-read' }}
+                          contentDisposition="auto"
+                          />
                       </Col>
                       <Col md="10" md-offset="1">
                         <legend><h6 className={styles.formtext}>詳細敘述 (Optional)</h6></legend>

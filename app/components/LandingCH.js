@@ -24,7 +24,8 @@ const initState = {
   userEmail: null,
   imgUrl: null,
   url: null,
-  hasReported: null
+  hasReported: null,
+  msg: null
 };
 
 export default class LandingCH extends React.Component {
@@ -59,8 +60,8 @@ export default class LandingCH extends React.Component {
 
   _onSave = (e) => {
     e.preventDefault();
-    const { organization, organizationEmail, userName, userEmail } = this.state;
-    if (organization && organizationEmail && userName, userEmail) {
+    const { organization, organizationEmail, userName, userEmail, imgUrl } = this.state;
+    if (organization && organizationEmail && userName, userEmail && imgUrl) {
       axios.post('https://5bq2v7mgi5.execute-api.us-east-1.amazonaws.com/prod/mySimpleBE', {
           "Item": {
             timestamp: new Date().getTime(),
@@ -70,14 +71,14 @@ export default class LandingCH extends React.Component {
         })
         .then((response) => {
           if (response.status === 200) {
-            this.setState({ ...initState, hasReported: true,  })
+            this.setState({ ...initState, hasReported: true, msg: null  })
           }
         })
         .catch((err) => {
           this.setState({ msg: err.message });
         })
       } else {
-        this.setState({ msg: '請輸入必填資訊！'})
+        this.setState({ msg: '請輸入必填資訊和上傳截圖！'})
       }
   }
 
@@ -204,6 +205,7 @@ export default class LandingCH extends React.Component {
                         <Textarea hint="請詳細指出名稱誤植處" value={situation} onChange={this._onChangeSituation} />
                       </Col>
                       <Col md="5" md-offset="5">
+                        <p className={styles.errMessage}> {this.state.msg} </p>
                         <Button className={styles.heroBtn} variant="raised" onClick={this._onSave}>回覆</Button>
                       </Col>
                   </Form>

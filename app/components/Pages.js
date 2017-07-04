@@ -53,7 +53,7 @@ export default class ChPages extends React.Component {
                 <a href="#reportForm">
                   <Button color="primary" className={styles.navButton}>網頁回報</Button>
                 </a>
-                <a href="https://github.com/acsalu/Kiminonawa"
+                <a href="https://github.com/hsin421/Kiminonawa"
                   target="_blank">
                   <Button color="accent" className={styles.navButton}>下載Chrome Extension</Button>
                 </a>

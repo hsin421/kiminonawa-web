@@ -460,3 +460,7 @@ a:hover {
   display: block;
   width: 100%;
 }
+
+.errMessage {
+  color: #d11212;
+}

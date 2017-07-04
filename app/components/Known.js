@@ -13,8 +13,8 @@ import styles from '../styles.css';
 import knownIcon from '../images/known_icon.png';
 
 // sample data
-const sampleData = [  
-   {  
+const sampleData = [
+   {
       "_id":"57d77205e2f4ec0e00304cea",
       "caseId":"1473737221646",
       "count":1,
@@ -29,7 +29,7 @@ const sampleData = [
       "url":"",
       "imgUrl":"https://ucarecdn.com/ca398641-4236-4481-962a-c9b0fd7e99e4/"
    },
-   {  
+   {
       "_id":"581e89988ea2550e0014b5ed",
       "caseId":"1462835747800",
       "count":1,
@@ -54,28 +54,20 @@ export default class Known extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/api/topics')
+    axios.get('https://5bq2v7mgi5.execute-api.us-east-1.amazonaws.com/prod/mySimpleBE?TableName=TW-Name')
       .then(response => {
-        this.setState({data: response.data});
+        this.setState({data: response.data.Items});
     });
   }
 
-  _getCases() {
-    const {data} = this.state;
-    const records = data && !!data.length ?
-      data : sampleData;
-
-    return records.map(record => (
-        <Case situation={record.situation} 
-          url={record.url} 
-          imgUrl={record.imgUrl} 
-          key={record._id} />
-    ));
-  }
-
   render() {
-    const cases = this._getCases();
-
+    const cases = this.state.data.map(record => (
+        <Case situation={record.situation}
+          url={record.url}
+          imgUrl={record.imgUrl}
+          user={record.userName}
+          key={record.timestamp} />
+    ));
     return (
       <div>
         <Container className={styles.pageBody}>

@@ -16,18 +16,21 @@ import docIcon from '../images/known_icon.png';
 import logo from '../images/NameIsTaiwan_logo.png';
 import axios from 'axios';
 import ReactS3Uploader from 'react-s3-uploader';
+const initState = {
+  organization: null,
+  organizationEmail: null,
+  situation: null,
+  userName: null,
+  userEmail: null,
+  imgUrl: null,
+  url: null,
+  hasReported: null
+};
 
 export default class LandingCH extends React.Component {
   constructor(prop, context) {
     super(prop, context);
-    this.state = {
-      organization: null,
-      organizationEmail: null,
-      situation: null,
-      userName: null,
-      userEmail: null,
-      imgUrl: null
-    };
+    this.state = initState;
   }
 
   _onChangeOrg = (event) => {
@@ -54,17 +57,28 @@ export default class LandingCH extends React.Component {
     this.setState({url: event.target.value});
   }
 
-  _onSave = () => {
-    axios.post('http://localhost:3001/api/topics', this.state)
-    .then(response => {
-      console.log(response);
-      if (response.status === 200) {
-        this.setState( { hasReported: true} );
+  _onSave = (e) => {
+    e.preventDefault();
+    const { organization, organizationEmail, userName, userEmail } = this.state;
+    if (organization && organizationEmail && userName, userEmail) {
+      axios.post('https://5bq2v7mgi5.execute-api.us-east-1.amazonaws.com/prod/mySimpleBE', {
+          "Item": {
+            timestamp: new Date().getTime(),
+            ...this.state
+          },
+          "TableName": 'TW-Name'
+        })
+        .then((response) => {
+          if (response.status === 200) {
+            this.setState({ ...initState, hasReported: true,  })
+          }
+        })
+        .catch((err) => {
+          this.setState({ msg: err.message });
+        })
+      } else {
+        this.setState({ msg: '請輸入必填資訊！'})
       }
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
   }
 
   _handleUploadFinish = (uploadResult) => {
@@ -73,6 +87,14 @@ export default class LandingCH extends React.Component {
   }
 
   render() {
+    const { organization,
+    organizationEmail,
+    situation,
+    userName,
+    userEmail,
+    imgUrl,
+    url,
+    msg } = this.state;
 
     var fluidCol = {
       paddingLeft: 0,
@@ -136,7 +158,7 @@ export default class LandingCH extends React.Component {
                 <img src={docIcon} className={styles.icon} />
               </div>
               <h1 id="reportForm" className={styles.docIconText}>網頁回報案件</h1>
-              {this.state.hasReported ? 
+              {this.state.hasReported ?
                 (
                   <div className={styles.bodyTextWrap}>
                     <p> 感謝您的通報，我們會立即處理！ </p>
@@ -147,25 +169,25 @@ export default class LandingCH extends React.Component {
                   <Form>
                       <Col md="5" md-offset="1">
                         <legend><h6 className={styles.formtext}>網站所有者</h6></legend>
-                        <Input hint="機構網站名稱, 如Costco" onChange={this._onChangeOrg}/>
+                        <Input hint="機構網站名稱, 如Costco" value={organization} onChange={this._onChangeOrg}/>
                       </Col>
                       <Col md="5" md-offset="1">
                         <legend><h6 className={styles.formtext}>問題網址</h6></legend>
-                        <Input hint="http://www.url.com/page" onChange={this._onChangeUrl} />
+                        <Input hint="http://www.url.com/page" value={url} onChange={this._onChangeUrl} />
                       </Col>
 
                       <Col md="5" md-offset="1">
                         <legend><h6 className={styles.formtext}>您的姓名</h6></legend>
-                        <Input hint="王小明" onChange={this._onChangeName} />
+                        <Input hint="王小明" value={userName} onChange={this._onChangeName} />
                       </Col>
                       <Col md="5" md-offset="1">
                         <legend><h6 className={styles.formtext}>您的信箱</h6></legend>
-                        <Input hint="user@email.com" onChange={this._onChangeEmail} />
+                        <Input hint="user@email.com" value={userEmail} onChange={this._onChangeEmail} />
                       </Col>
 
                       <Col md="5" md-offset="1">
                         <legend><h6 className={styles.formtext}>公司負責人信箱 (Optional)</h6></legend>
-                        <Input hint="company@email.com" onChange={this._onChangeOrgEmail} />
+                        <Input hint="company@email.com" value={organizationEmail} onChange={this._onChangeOrgEmail} />
                       </Col>
                       <Col md="5" md-offset="1">
                         <legend><h6 className={styles.formtext}>上傳螢幕截圖 (Optional)</h6></legend>
@@ -179,7 +201,7 @@ export default class LandingCH extends React.Component {
                       </Col>
                       <Col md="10" md-offset="1">
                         <legend><h6 className={styles.formtext}>詳細敘述 (Optional)</h6></legend>
-                        <Textarea hint="請詳細指出名稱誤植處" onChange={this._onChangeSituation} />
+                        <Textarea hint="請詳細指出名稱誤植處" value={situation} onChange={this._onChangeSituation} />
                       </Col>
                       <Col md="5" md-offset="5">
                         <Button className={styles.heroBtn} variant="raised" onClick={this._onSave}>回覆</Button>
